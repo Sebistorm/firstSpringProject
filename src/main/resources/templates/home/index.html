@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1st Page</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <section class="contentWrapper">
+        <h1 id="h1">Spring Basic Exercise</h1>
+        <p>This is a paragraft</p>
+        <p style="color:purple;">This is <span>another</span> paragraf</p>
+        <div class="bigSmallContent">
+            <p>This is Large!</p>
+            <p id="animate-p">This is large too</p>
+        </div>
+        <p><a href="https://www.w3schools.com/html/">Tutorials about HTML</a></p>
+        <div id="deadpool-container">
+            <img id="img-deadpool" class="responsive img-deadpool-animation" src="img/deadpool.jpg" alt="Deadpool in a Sweater ;)">
+        </div>
+
+        <button id="btnGoCrazy">Friday Mode!</button>
+        <button id="btnSendPersonData">Send Person Data</button>
+        <a href="/converter"><button id="btnGoToConvert">Go To Convert</button></a>
+    </section>
+
+    <div id="formWrapper">
+        <form action="/personData" method="post">
+            <h2>Person Data <span class="formCloser">&#10006;</span></h2>
+            <input name="first_name" placeholder="Firstname" type="text">
+            <input name="last_name" placeholder="Lastname" type="text">
+            <input type="submit">
+        </form>
+    </div>
+
+
+    <script>
+        document.querySelector("#animate-p").addEventListener("mouseover", function(){
+            console.log('get it small');
+            document.querySelector("#animate-p").innerHTML = "That was large..";
+            document.querySelector("#animate-p").classList.add("small-p");
+        });
+
+        document.querySelector("#h1").addEventListener("click", function(){
+            console.log('rotate it');
+            document.querySelector("#h1").classList.add("rotate")
+            setTimeout(function(){ document.querySelector("#h1").classList.remove("rotate"); }, 3000);
+
+        });
+
+        document.querySelector("#img-deadpool").addEventListener("click", function(){
+            console.log('toogle deadpool');
+            document.querySelector("#img-deadpool").classList.toggle("img-deadpool-animation");
+        });
+
+        document.querySelector("#btnGoCrazy").addEventListener("click", function(){
+            console.log('Go Crazy');
+            document.querySelector("body").classList.toggle("go-crazy");
+            document.querySelector("#img-deadpool").classList.toggle("img-deadpool-animation-crazy");
+            document.querySelector("#h1").classList.toggle("rotate");
+            document.querySelector("#animate-p").classList.toggle("small-p-crazy");
+        });
+
+        document.querySelector("#btnSendPersonData").addEventListener("click", function () {
+            console.log('Send Data');
+            document.querySelector("#formWrapper").classList.toggle("d-flex");
+            document.querySelector(".contentWrapper").classList.toggle("opacity-050");
+        })
+
+        document.querySelector(".formCloser").addEventListener("click", function () {
+            console.log('Close form');
+            document.querySelector("#formWrapper").classList.toggle("d-flex");
+            document.querySelector(".contentWrapper").classList.toggle("opacity-050");
+        })
+
+
+    </script>
+</body>
+</html>

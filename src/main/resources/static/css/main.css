@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    overflow: hidden;
+}
+.contentWrapper h1 {
+    text-align: right;
+    margin-right: 50px;
+    transition: transform 1s linear;
+    transform-origin: center center;
+    transform-style: preserve-3D;
+    cursor: pointer;
+}
+
+.contentWrapper span {
+    margin: 0px 5px;
+    background-color: yellow;
+    animation-name: Party-lights;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.bigSmallContent {
+    display: flex;
+}
+
+.bigSmallContent p {
+    font-size: 3em;
+}
+
+.bigSmallContent p:last-of-type {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 20px;
+}
+
+.bigSmallContent p.small-p {
+    font-size: 2em;
+}
+
+.bigSmallContent p {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#img-deadpool {
+    height: 500px;
+    max-height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.img-deadpool-animation {
+    width: 100%;
+    position: relative;
+    -webkit-animation: ease-in infinite;
+    -webkit-animation-name: Move-it;
+    -webkit-animation-duration: 3s;
+}
+
+.img-deadpool-animation-crazy {
+    -webkit-animation-name: Move-it-crazy !important;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#btnGoCrazy {
+    background-color: #555555;
+    margin-top: 20px;
+    transition: all .5s;
+}
+
+#btnGoCrazy:hover {
+    color: #555555;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#btnSendPersonData {
+    background-color: #042c3e;
+    margin-top: 20px;
+    transition: all .5s;
+}
+
+#btnSendPersonData:hover {
+    color: #042c3e;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#btnGoToConvert {
+    background-color: rebeccapurple;
+    margin-top: 20px;
+    transition: all .5s;
+}
+
+#btnGoToConvert:hover {
+    color: rebeccapurple;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#btnGoToConvert a {
+    color: white;
+    text-decoration: none;
+ }
+
+
+
+.rotate {
+    -webkit-animation: ease-in-out infinite;
+    -webkit-animation-name: animation-rotate;
+    -webkit-animation-duration: 3s;
+}
+
+.go-crazy {
+    animation-name: Party-lights;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.bigSmallContent p.small-p-crazy {
+    animation-name: Party-font-size;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-rotate {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes Party-font-size {
+    0%  {font-size: 3em;}
+    50%  {font-size: 2em}
+    100% {font-size: 3em}
+}
+
+
+@keyframes Party-lights {
+    0%  {background-color: red;}
+    10% {background-color: yellow;}
+    20% {background-color: blue;}
+    30% {background-color: green;}
+    40% {background-color: pink;}
+    50% {background-color: purple;}
+    60% {background-color: saddlebrown;}
+    70% {background-color: darkslategrey;}
+    80% {background-color: darkblue;}
+    90% {background-color: orangered;}
+    100% {background-color: cadetblue;}
+}
+
+@-webkit-keyframes Move-it-crazy {
+    0% {
+        left: -40%;
+        transform: rotate(0deg);
+    }
+    20% {
+        left: -10%;
+        transform: rotate(360deg);
+    }
+    40% {
+        left: 30%;
+        transform: rotate(720deg);
+    }
+    60% {
+        left: 50%;
+        transform: rotate(1080deg);
+    }
+    80% {
+        left: 70%;
+        transform: rotate(1440deg);
+    }
+    100% {
+        left: 110%;
+        transform: rotate(1800deg);
+    }
+}
+
+@-webkit-keyframes Move-it {
+    0% {
+        left: -40%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+#formWrapper {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+#formWrapper form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#formWrapper input {
+    margin-bottom: 15px;
+    background-color: #d8d0d0;
+    padding: 10px;
+    border: 0px;
+}
+
+#formWrapper input:last-of-type {
+    margin-bottom: 0px;
+}
+
+#formWrapper h2 {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opacity-050 {
+    opacity: 0.5;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.formCloser {
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 1s;
+    transform-origin: center;
+}
+
+.formCloser:hover {
+    transform: rotate(90deg);
+}
+
+#converterSection {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#convertWrapper {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px black;
+    min-width: 270px;
+}
+
+#convertWrapper h1 {
+    margin-top: 0px;
+}
+
+#convertContent .converterInput {
+    margin-bottom: 15px;
+    background-color: #d8d0d0;
+    padding: 10px;
+    border: 0px;
+    width: 100%;
+}
+
+#convertContent p {
+    margin: 0px;
+}
+
+#convertContent p span {
+    font-weight: 900;
+}
+
+#convertContent .converterButton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #042c3e;
+    margin-top: 0px;
+    transition: all .5s;
+}
+
+#convertContent .converterButton:hover {
+    background-color: white;
+    border: 1px solid black;
+    color: #042c3e;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;;
+}
+

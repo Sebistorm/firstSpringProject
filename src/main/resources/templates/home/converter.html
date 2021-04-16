@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converter</title>
+    <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <section id="converterSection">
+        <div id="convertWrapper">
+            <h1>Converter</h1>
+            <div id="convertContent">
+                <form action="/convert" method="POST">
+                    <input required class="converterInput" type="number" name="converter" placeholder="Number">
+                    <p>Converted to: <span th:text="${total}"></span></p>
+                    <div class="buttonContainer">
+                        <input class="converterButton" type="submit" value="C2F" name="c2f">
+                        <input class="converterButton" type="submit" value="F2C" name="f2c">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
